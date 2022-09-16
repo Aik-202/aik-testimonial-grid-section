@@ -1,23 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
 * {
     box-sizing: border-box;
     transition: 1s;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
     color: hsl(0, 0%, 100%);
+    width: fit-content;
+}
+
+p {
+    font-size: 0.8em;
 }
 
 figcaption>p {
-    font-size: 12px;
+    font-size: 0.6em;
     margin: 2px;
     margin-bottom: 0;
 }
 
-h1, h2 {
-    font-size: 20px;
+figcaption>p:last-child {
+    opacity: 50%;
 }
 
-body{
+h1,
+h2 {
+    font-size: 15px;
+}
+
+body {
     margin: 0;
     background-color: hsl(210, 46%, 95%);
 }
@@ -26,11 +40,13 @@ body{
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: auto auto auto;
-    grid-template-areas: 'violentContainer violentContainer violentContainer violentContainer darkGrayContainer' 'violentContainer violentContainer violentContainer firstWhiteContainer firstWhiteContainer';
-    grid-column-gap: 5px;
-    margin: 10%;
     max-width: 100%;
+    grid-gap: 15px;
+    margin: 10%;
+}
+
+.container>div {
+    padding: 10px 20px;
 }
 
 figure {
@@ -56,21 +72,21 @@ figcaption {
     border: 1px solid hsl(263, 55%, 52%);
     border-radius: 5px;
     background-color: hsl(263, 55%, 52%);
-    grid-area: 'violentContainer';
+    grid-area: 1/1/5/3;
 }
 
 .cont2 {
     border: 1px solid hsl(217, 19%, 35%);
     border-radius: 5px;
     background-color: hsl(217, 19%, 35%);
-    grid-area: 'darkGrayContainer';
+    grid-area: 1/4/5/3;
 }
 
 .cont3 {
     border: 1px solid hsl(0, 0%, 100%);
     border-radius: 5px;
     background-color: hsl(0, 0%, 100%);
-    grid-area: 'firstWhiteContainer';
+    grid-area: 1/4/9/5;
 }
 
 .cont3>h2 {
@@ -86,11 +102,11 @@ figcaption {
     color: hsl(219, 29%, 14%);
 }
 
-.cont4{
+.cont4 {
     border: 1px solid hsl(0, 0%, 100%);
     border-radius: 5px;
     background-color: hsl(0, 0%, 100%);
-    grid-area: 'lastContainer';
+    grid-area: 5/1/9/2;
 }
 
 .cont4>h2 {
@@ -106,16 +122,17 @@ figcaption {
     color: hsl(219, 29%, 14%);
 }
 
-.cont5{
+.cont5 {
     border: 1px solid hsl(219, 29%, 14%);
     border-radius: 5px;
     background-color: hsl(219, 29%, 14%);
-    grid-area: 'darkBlackContainer';
+    grid-area: 5/2/9/4;
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .attribution a {
